@@ -1,0 +1,23 @@
+body 
+{background-color: aquamarine;
+justify-content: center;
+align-items: center;
+}
+header {
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    background-color: bisque;
+}
+section {
+    background-color: blueviolet;
+    width: fit-content;
+    align-items: center;
+    
+}
+footer {
+    background-color: brown;
+    width: fit-content;
+}
