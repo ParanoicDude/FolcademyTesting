@@ -1,29 +1,107 @@
+*{
+    margin: 0;
+    font-family: 'Changa_one', cursive;
+}
 header{
-    background-color: blue;
-    height: 200px;
-    position: relative;
-}
-nav{
-    background-color: black;
-    height: 100px;
-    width: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-section{
-    background-color: red;
-    height: 200px;
+    align-items: center;
+    background-color: rgb(120, 255, 170);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 10px;
+    width: 100%;
 
 }
-.parte1{
-    background-color: brown;
+header .header_img{
+    height: 50px;
+
 }
-.parte2{
-    background-color: lightcoral;
+header .header_nav{
+    display: flex;
+    float: right;
+
+}
+header .header_nav li{
+    list-style: none;
+    padding: 0 20px;
+
+}
+header .header_nav li a{
+    color: #060101;
+    font-weight: 500;
+    text-decoration: none;
+}
+.hero {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 10px;
+}
+.hero .hero_img img{
+    width: 400px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin-right: 50px;
+}
+.hero .hero_img{
+    background: url(trippybackground.jpg);
+    border-radius: 20px;
+}
+.hero_txt{
+    width: 700px;
+}
+.hero_txt h1{
+    padding-bottom: 30px;
+    text-align: center;
+}
+.hero_txt p{
+    text-align: justify;
+    line-height: 26px;
+}
+.cartas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+.cartas .titulo_cartas{
+    align-items: center;
+    padding: 100px;
+    text-align: center;
+}
+
+
+.cartas .titulo_cartas h2{
+    padding-bottom: 20px
+}
+
+
+.carta{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    width: 300px;
+}
+.carta img{ 
+    height: 150px;
+}
+.carta .card_txt{
+    width: 300px;
 }
 footer{
-    background-color: yellow;
-    height: 200px;
+    text-align: center;
+    background-color: black;
+    height: 50px;
+    margin-top: 50px;
+}
+footer p{
+    margin-top: 10px;
+    color: #fff;
 }

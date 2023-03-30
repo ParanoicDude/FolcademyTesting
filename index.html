@@ -5,15 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Probando, probando</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+    <title>Aprendiendo Haciendo</title>
 </head>
 <body>
+    <script>
+        var botonPresionado = 0;
+        function Contador(){
+            botonPresionado += 1;
+            document.getElementById("boton").innerHTML = "Acariciaste el mapache " + botonPresionado + " veces";
+        };
+        function MapacheAcariciado(){
+            document.getElementById("gif").src = 'raccoonpet-noloop.gif'
+        };
+        function MapacheHero(){
+            Contador()
+            MapacheAcariciado()
+
+        };
+    </script>
     <header>
-        <nav></nav>
+        <img src="logotipo.png" alt="" class="header_img">
+        <nav class="header_nav">
+            <li><a href="https://github.com/ParanoicDude">Sigueme</a></li>
+            <li><a href="https://t.me/ParanoicTelegram">Escribeme</a></li>
+            <li><a href=""></a></li>
+            <li><button id="boton" type="button" onclick="MapacheHero()">Este boton hara algo genial</button></li>
+        </nav>
     </header>
-    <section class="parte1">Esta es una seccion</section>
-    <section class="parte2">Esta tambien es una seccion</section>
-    <footer></footer> 
+    <section class="hero">
+        <div class="hero_img">
+            <img src="raccoon-frame.gif" alt="Mapache" id="gif">
+        </div>
+        <div>
+            <h1>Aprendiendo Haciendo: Aplicando lo aprendido paso a paso</h1>
+            <p>Practicar como metodo de aprendizaje es una de las formas que mas me ha interesado a la hora de aprender a programar.
+
+                Dicho esto, esta pagina tiene como objetivo aplicar todo lo aprendido con el objetivo de poder visualizar y familiarizarme con todas las tecnologias y herramientas que voy a utilizar en mi proceso de aprendizaje de programacion C:.
+            </p>
+        </div>
+    </section>
+    <section class="cartas">
+        <div class="titulo_cartas">
+            <h2>El lenguaje de las maquinas</h2>
+            <p>Como los humanos, las maquinas tienen lenguajes que le permiten poder comunicar y recibir instrucciones, para poder realizar cualquier tarea que se nos ocurra.</p>
+        </div>
+        <div class="carta">
+            <img src="captura-html.png" alt="">
+            <h2>HTML</h2>
+            <p>Con HTML podemos crear paginas web como la que ves en este momento, darle estructura, y formato para que esta pueda ser facilmente traducida por cualquier ordenador y navegador que tenga acceso a ella</p>
+            <button>
+                <a href="https://es.wikipedia.org/wiki/HTML">Ver mas</a>
+            </button>
+        </div>
+        <div class="carta">
+            <img src="captura-css.png" alt="">
+            <h2>CSS</h2>
+            <p>Con CSS podemos darle nuestro toque original, brindandonos herramientas que nos permiten ofrecer una experiencia personalizada y atractiva visualmente</p>
+            <button>
+                <a href="https://es.wikipedia.org/wiki/CSS">Ver mas</a>
+            </button>
+        </div>
+        <div class="carta">
+            <img src="captura-js.png" alt="">
+            <h2>Javascript</h2>
+            <p>Con Javascript puedes añadir funcionalidades logicas a tu pagina web, como formularios, bases de datos, herramientas con las que pueden interactuar los usuarios, y acariciadores de mapaches</p>
+            <button>
+                <a href="https://es.wikipedia.org/wiki/JavaScript">Ver mas</a>
+            </button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Se aprende haciendo!</p>
+    </footer> 
     
 </body>
 </html>
