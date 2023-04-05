@@ -1,8 +1,10 @@
-*{
+* {
     margin: 0;
     font-family: 'Changa_one', cursive;
+    overflow-x: hidden;
 }
-header{
+
+header {
     align-items: center;
     background-color: rgb(120, 255, 170);
     display: flex;
@@ -13,25 +15,30 @@ header{
     width: 100%;
 
 }
-header .header_img{
+
+header .header_img {
     height: 50px;
 
 }
-header .header_nav{
+
+header .header_nav {
     display: flex;
     float: right;
 
 }
-header .header_nav li{
+
+header .header_nav li {
     list-style: none;
     padding: 0 20px;
 
 }
-header .header_nav li a{
+
+header .header_nav li a {
     color: #060101;
     font-weight: 500;
     text-decoration: none;
 }
+
 .hero {
     align-items: center;
     display: flex;
@@ -39,7 +46,8 @@ header .header_nav li a{
     justify-content: center;
     margin: 50px 10px;
 }
-.hero .hero_img img{
+
+.hero .hero_img img {
     width: 400px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -48,60 +56,74 @@ header .header_nav li a{
     -o-border-radius: 4px;
     margin-right: 50px;
 }
-.hero .hero_img{
-    background: url(trippybackground.jpg);
+
+.hero .hero_img {
+    background: url(imagenes/trippybackground.jpg);
     border-radius: 20px;
 }
-.hero_txt{
+
+.hero_txt {
     width: 700px;
+    padding: 20px;
 }
-.hero_txt h1{
+
+.hero_txt h1 {
     padding-bottom: 30px;
     text-align: center;
 }
-.hero_txt p{
+
+.hero_txt p {
     text-align: justify;
     line-height: 26px;
 }
-.cartas{
+
+.cartas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 50px;
 }
-.cartas .titulo_cartas{
+
+.cartas .titulo_cartas {
     align-items: center;
     padding: 100px;
     text-align: center;
 }
 
 
-.cartas .titulo_cartas h2{
+.cartas .titulo_cartas h2 {
     padding-bottom: 20px
 }
 
 
-.carta{
+.carta {
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     width: 300px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
-.carta img{ 
+
+.carta img {
     height: 150px;
 }
-.carta .card_txt{
-    width: 300px;
+
+.carta .card_txt {
+    padding: 10px;
 }
-footer{
+
+footer {
     text-align: center;
     background-color: black;
     height: 50px;
     margin-top: 50px;
 }
-footer p{
+
+footer p {
     margin-top: 10px;
     color: #fff;
 }
