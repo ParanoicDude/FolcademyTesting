@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+    <!--Script del boton en el header, interactua con el Hero-->
+    <script src="calltoaction.js"></script>
     <title>Aprendiendo Haciendo</title>
 </head>
-<body>
-    <script>
-        var botonPresionado = 0;
-        function Contador(){
-            botonPresionado += 1;
-            document.getElementById("boton").innerHTML = "Acariciaste el mapache " + botonPresionado + " veces";
-        };
-        function MapacheAcariciado(){
-            document.getElementById("gif").src = 'imagenes/raccoonpet-noloop.gif'
-        };
-        function MapacheHero(){
-            Contador()
-            MapacheAcariciado()
 
-        };
-    </script>
+<body>
     <header>
+        <!--script que scrollea la pagina a cada seccion-->
+        <script src="scroll.js"></script>
         <img src="imagenes/logotipo.png" alt="" class="header_img">
         <nav class="header_nav">
-            <li><a href="https://github.com/ParanoicDude">Sigueme</a></li>
-            <li><a href="https://t.me/ParanoicTelegram">Escribeme</a></li>
-            <li><a href=""></a></li>
-            <li><button id="boton" type="button" onclick="MapacheHero()">Este boton hara algo genial</button></li>
+           <li><button class="header-button" onclick="scrollToTitle('galeria')">Galeria</button></li> 
+            <li><button  class="header-button" onclick="scrollToTitle('formulario')">Contactame</button></li>
+            <li><button class="header-button" onclick="scrollToTitle('mapa')">Encuentrame</button></li>
+            <li><button class="header-button" id="boton" type="button" onclick="MapacheHero()">Este boton hara algo genial</button></li>
         </nav>
     </header>
     <section class="hero">
         <div class="hero_img">
             <img src="imagenes/raccoon-frame.gif" alt="Mapache" id="gif">
         </div>
-        <div class ="hero_txt">
+        <div class="hero_txt">
             <h1>Aprendiendo Haciendo: Aplicando lo aprendido paso a paso</h1>
-            <p>Practicar como metodo de aprendizaje es una de las formas que mas me ha interesado a la hora de aprender a programar.
+            <p>Practicar como metodo de aprendizaje es una de las formas que mas me ha interesado a la hora de aprender
+                a programar.
 
-                Dicho esto, esta pagina tiene como objetivo aplicar todo lo aprendido con el objetivo de poder visualizar y familiarizarme con todas las tecnologias y herramientas que voy a utilizar en mi proceso de aprendizaje de programacion C:.
+                Dicho esto, esta pagina tiene como objetivo aplicar todo lo aprendido con el objetivo de poder
+                visualizar y familiarizarme con todas las tecnologias y herramientas que voy a utilizar en mi proceso de
+                aprendizaje de programacion C:.
             </p>
         </div>
     </section>
     <section class="cartas">
         <div class="titulo_cartas">
             <h2>El lenguaje de las maquinas</h2>
-            <p>Como los humanos, las maquinas tienen lenguajes que le permiten poder comunicar y recibir instrucciones, para poder realizar cualquier tarea que se nos ocurra.</p>
+            <p>Como los humanos, las maquinas tienen lenguajes que le permiten poder comunicar y recibir instrucciones,
+                para poder realizar cualquier tarea que se nos ocurra.</p>
         </div>
         <div class="carta">
             <img src="imagenes/captura-html.png" alt="">
             <div class="card_txt">
                 <h2>HTML</h2>
-                <p>Con HTML podemos crear paginas web como la que ves en este momento, darle estructura, y formato para que esta pueda ser facilmente traducida por cualquier ordenador y navegador que tenga acceso a ella</p>
+                <p>Con HTML podemos crear paginas web como la que ves en este momento, darle estructura, y formato para
+                    que esta pueda ser facilmente traducida por cualquier ordenador y navegador que tenga acceso a ella
+                </p>
                 <button>
                     <a href="https://es.wikipedia.org/wiki/HTML">Ver mas</a>
                 </button>
@@ -66,32 +63,74 @@
             <img src="imagenes/captura-css.png" alt="">
             <div class="card_txt">
                 <h2>CSS</h2>
-            <p>Con CSS podemos darle nuestro toque original, brindandonos herramientas que nos permiten ofrecer una experiencia personalizada y atractiva visualmente</p>
-            <button>
-                <a href="https://es.wikipedia.org/wiki/CSS">Ver mas</a>
-            </button>
+                <p>Con CSS podemos darle nuestro toque original, brindandonos herramientas que nos permiten ofrecer una
+                    experiencia personalizada y atractiva visualmente</p>
+                <button>
+                    <a href="https://es.wikipedia.org/wiki/CSS">Ver mas</a>
+                </button>
             </div>
         </div>
         <div class="carta">
             <img src="imagenes/captura-js.png" alt="">
             <div class="card_txt">
                 <h2>Javascript</h2>
-                <p>Con Javascript puedes añadir funcionalidades logicas a tu pagina web, como formularios, bases de datos, herramientas con las que pueden interactuar los usuarios, y acariciadores de mapaches</p>
+                <p>Con Javascript puedes añadir funcionalidades logicas a tu pagina web, como formularios, bases de
+                    datos, herramientas con las que pueden interactuar los usuarios, y acariciadores de mapaches</p>
                 <button>
                     <a href="https://es.wikipedia.org/wiki/JavaScript">Ver mas</a>
                 </button>
             </div>
         </div>
     </section>
-    <section>
-
+    <section class="galeria" id="galeria">
+        <div class="titulo_galeria">
+            <h2>Modelo de Galeria de imagenes</h2>
+            <p>Nada mejor que un monton de animalitos para alegrarnos el dia</p>
+        </div>
+        <div class="gallery-container">
+            <img class="gallery-image" src="imagenes/gatos.jpg">
+            <img class="gallery-image" src="imagenes/mapache.jpg">
+            <img class="gallery-image" src="imagenes/nutria.jpg">
+            <img class="gallery-image" src="imagenes/oveja.jpg">
+            <img class="gallery-image" src="imagenes/perros.jpg">
+            <img class="gallery-image" src="imagenes/zarigueya.jpg">
+        </div>
     </section>
-    <section>
+    <section class="formulario" id="formulario">
+        <!--cuando averigue como hacer funcionar los request o webhooks hago que este formulario me envie la info a un excel o algo-->
+        <h2>Si te gustan los animales, cuentamelo</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Mail:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+    <section class="mapa" id="mapa">
+        <h2>Ubicame</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.262716128521!2d-58.43295252497299!3d-34.57221847296557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb597c343078f%3A0xeaf82272a9b194a1!2sB%C3%A1ez%20243%2C%20C1426BRE%20CABA!5e0!3m2!1ses-419!2sar!4v1681775084391!5m2!1ses-419!2sar"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </section>
     <footer>
-        <p>Se aprende haciendo!</p>
-    </footer> 
-    
+        <!--no se me ocurrio nada mas interesante para el footer, capaz mas adelante le pongo un boton scroll back to top-->
+        <p>copyright 2023 Web Designer - Folcademy - JDG</p>
+           
+        <i class="fa fa-cloud" style="font-size:24px;"></i>
+        <i class="fa fa-cloud" style="font-size:36px;"></i>
+        <i class="fa fa-cloud" style="font-size:48px;color:red;"></i>
+        <i class="fa fa-cloud" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+    </footer>
+
+
 </body>
+
 </html>

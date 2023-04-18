@@ -39,6 +39,25 @@ header .header_nav li a {
     text-decoration: none;
 }
 
+.header-button {
+    background-color: #f2f2f2;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, #f2f2f2, #e2e2e2);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .header-button:hover {
+    background-image: linear-gradient(to bottom, #e2e2e2, #d2d2d2);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+
 .hero {
     align-items: center;
     display: flex;
@@ -77,6 +96,7 @@ header .header_nav li a {
     line-height: 26px;
 }
 
+
 .cartas {
     display: flex;
     flex-wrap: wrap;
@@ -110,20 +130,104 @@ header .header_nav li a {
 
 .carta img {
     height: 150px;
-}
+} 
 
 .carta .card_txt {
     padding: 10px;
 }
 
+.galeria .titulo_galeria {
+    align-items: center;
+    padding: 100px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+.formulario h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+.formulario form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.formulario label {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .formulario input,
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .formulario button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .formulario button:hover {
+    background-color: #3e8e41;
+  }
+
+.mapa {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mapa h2 {
+    align-items: center;
+    padding: 100px;
+    text-align: center;
+}
+
+
 footer {
     text-align: center;
-    background-color: black;
-    height: 50px;
+    background-color: rgb(172, 172, 172);
+    height: 250px;
     margin-top: 50px;
 }
 
+
 footer p {
     margin-top: 10px;
-    color: #fff;
+    color: #000000;
 }
