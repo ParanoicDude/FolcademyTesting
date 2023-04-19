@@ -1,0 +1,24 @@
+header {
+    height: 250px;
+}
+
+
+nav {
+    height: 120px;
+}
+
+
+section {
+    height: 350px;
+    padding: 50px;
+}
+
+
+.box {
+    height: 250px;
+}
+
+
+footer {
+    height: 200px;
+}
