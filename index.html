@@ -5,42 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--aca agregamos el los link de bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!--JQuery, porque bueno no se, capaz sirve ja-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
-    <!--Script del boton en el header, interactua con el Hero-->
-    <script src="calltoaction.js"></script>
-    <title>Aprendiendo Haciendo</title>
+        <title>Aprendiendo Haciendo</title>
 </head>
-
 <body>
     <header>
-        <!--script que scrollea la pagina a cada seccion-->
-        <script src="scroll.js"></script>
-        <img src="imagenes/logotipo.png" alt="" class="header_img">
-        <nav class="header_nav">
-           <li><button class="header-button" onclick="scrollToTitle('galeria')">Galeria</button></li> 
-            <li><button  class="header-button" onclick="scrollToTitle('formulario')">Contactame</button></li>
-            <li><button class="header-button" onclick="scrollToTitle('mapa')">Encuentrame</button></li>
-            <li><button class="header-button" id="boton" type="button" onclick="MapacheHero()">Este boton hara algo genial</button></li>
-        </nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="imagenes/logotipo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                    ParanoicDude
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="scrollToTitle('galeria')">Galeria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="scrollToTitle('formulario')">Formulario</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="scrollToTitle('mapa')">Mapa</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
-    <section class="hero">
-        <div class="hero_img">
-            <img src="imagenes/raccoon-frame.gif" alt="Mapache" id="gif">
-        </div>
-        <div class="hero_txt">
-            <h1>Aprendiendo Haciendo: Aplicando lo aprendido paso a paso</h1>
-            <p>Practicar como metodo de aprendizaje es una de las formas que mas me ha interesado a la hora de aprender
+    <section class="jumbotron text-center" id="hero">
+        <div class="container">
+            <h1 class="display-4">Aprendiendo Haciendo: Aplicando lo aprendido paso a paso</h1>
+            <p class="lead">Practicar como metodo de aprendizaje es una de las formas que mas me ha interesado a la hora
+                de aprender
                 a programar.
 
                 Dicho esto, esta pagina tiene como objetivo aplicar todo lo aprendido con el objetivo de poder
                 visualizar y familiarizarme con todas las tecnologias y herramientas que voy a utilizar en mi proceso de
-                aprendizaje de programacion C:.
-            </p>
+                aprendizaje de programacion C:.</p>
+            <a class="btn btn-primary" data-toggle="modal">Presiona aca!</a>
+            <div class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Acaricia al mapache</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="imagenes/raccoonpet.gif" alt="">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary">Cerrar tambien, supongo</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
         </div>
     </section>
+
     <section class="cartas">
         <div class="titulo_cartas">
             <h2>El lenguaje de las maquinas</h2>
@@ -59,6 +93,7 @@
                 </button>
             </div>
         </div>
+
         <div class="carta">
             <img src="imagenes/captura-css.png" alt="">
             <div class="card_txt">
@@ -82,6 +117,7 @@
             </div>
         </div>
     </section>
+
     <section class="galeria" id="galeria">
         <div class="titulo_galeria">
             <h2>Modelo de Galeria de imagenes</h2>
@@ -96,6 +132,7 @@
             <img class="gallery-image" src="imagenes/zarigueya.jpg">
         </div>
     </section>
+
     <section class="formulario" id="formulario">
         <!--cuando averigue como hacer funcionar los request o webhooks hago que este formulario me envie la info a un excel o algo-->
         <h2>Si te gustan los animales, cuentamelo</h2>
@@ -112,6 +149,7 @@
             <input type="submit" value="Enviar">
         </form>
     </section>
+
     <section class="mapa" id="mapa">
         <h2>Ubicame</h2>
         <iframe
@@ -120,17 +158,25 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </section>
+
     <footer>
         <!--no se me ocurrio nada mas interesante para el footer, capaz mas adelante le pongo un boton scroll back to top-->
         <p>copyright 2023 Web Designer - Folcademy - JDG</p>
-           
+
         <i class="fa fa-cloud" style="font-size:24px;"></i>
         <i class="fa fa-cloud" style="font-size:36px;"></i>
         <i class="fa fa-cloud" style="font-size:48px;color:red;"></i>
         <i class="fa fa-cloud" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
     </footer>
 
-
+    <!--otros links de bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!--archivo con las funciones de javascript-->
+    <script src="funciones.js"></script>
 </body>
 
 </html>
