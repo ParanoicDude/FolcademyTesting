@@ -2,7 +2,27 @@
     margin: 0;
     overflow-x: hidden;
 }
+.btn-primary {
+    background-color: #ff9900;
+    border-color: #ff9900;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #f48037;
+    border-color: #f48037;
+    transform: scale(1.1);
+  }
 
+#hero #hero_img img{
+    height: 500px;
+}
 .cartas {
     display: flex;
     flex-wrap: wrap;
@@ -124,16 +144,3 @@
     text-align: center;
 }
 
-
-footer {
-    text-align: center;
-    background-color: rgb(172, 172, 172);
-    height: 50px;
-    margin-top: 50px;
-}
-
-
-footer p {
-    margin-top: 10px;
-    color: #000000;
-}
